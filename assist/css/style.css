@@ -1,0 +1,34 @@
+* {box-sizing:border-box;}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.SetInfo {
+  font-size: 2rem;
+}
+.SetInfo input {
+  border: 2px solid #000;
+  padding: 5px;
+  font-size: 2rem;
+}
+.SetInfo button {
+  padding: 5px;
+  font-size: 2rem;
+  outline: none;
+  cursor: pointer;
+}
+.SetInfo button:active {
+  background: cyan;
+  color: #fff;
+}
+
+#message {
+  color: red;
+  font-size: 1.5rem;
+}
+
+#showData {
+  font-size: 2rem;
+}

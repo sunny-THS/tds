@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Control Nodemcu</title>
+
+    <!-- firebae -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.9/firebase-messaging.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.9/firebase-functions.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+
+    <script defer src="assist/js/init.js" charset="utf-8"></script>
+    <script defer src="assist/js/main.js" charset="utf-8"></script>
+
+    <link rel="stylesheet" href="assist/css/style.css">
+  </head>
+  <body>
+    <iframe name="temp" style="display:none;"></iframe>
+    <div class="SetInfo">
+      <h1>Điều khiển</h1>
+      <form class="Setdata" action="/" method="post" target="temp">
+        <label id="message" for="control"></label><br/>
+        <input id="data" name="control" type="text" placeholder="Mời nhập thông tin..." required/>
+        <button type="submit" name="button">Gửi</button>
+      </form>
+      <table id="showData" cellpadding="10px" style="margin-top:20px">
+        <tr>
+          <th>Nhiệt độ</th>
+          <th>ppm</th>
+          <th>Trạng thái</th>
+        </tr>
+        <tr>
+          <td id="dbNhietDo"></td>
+          <td id="dbPpm"></td>
+          <td id="dbTrangThai"></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
