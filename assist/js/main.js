@@ -7,7 +7,7 @@ starCountRef.on('value', (snapshot) => {
   {
     document.querySelector('#data').value = '';
   }
-  document.querySelector("#dbNhietDo").innerHTML = `${val.ThongSo.Temperature} &#8451;`;
+  document.querySelector("#dbNhietDo").innerHTML = `${Math.round(val.ThongSo.Temperature*100)/100} &#8451;`;
   document.querySelector("#dbPpm").innerHTML = `${Math.round(val.ThongSo.PPM*100)/100} ppm`;
   document.querySelector("#dbTrangThai").innerHTML = val.ThongSo.IsRun?"on":"off";
 });
